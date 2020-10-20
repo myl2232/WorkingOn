@@ -1,0 +1,22 @@
+1. 扰动：
+   可以用于UI，贴图，甚至角色。基本思路就是在将扰动算法+时间控制应用于ps阶段。
+
+2. 沙盘半透：
+   简化的Standard Shader，半透Pass。
+   
+3. DCG Water：
+   由Shader Forge做的插件，改写为build in shader。并做了大量简化。
+   
+4. 角色描边：
+   法线外扩。
+
+5. 标准Standard Shader。
+   改写自Standard。
+   
+6. 扫描线效果：
+   改写自shaderToy的效果。
+
+7. 云：
+  改造自UE的云效果。
+
+8. 
