@@ -1,0 +1,6 @@
+    水的一个插件，用到了深度，用来判断海岸，制作近处的水沫，远处就比较清亮。用来三个贴图，反射、法线、移位。屏幕空间位置projPos得到了partZ，深度图中的位置SceneZ，从而用SceneZ-PartZ用来判断水面
+ 有效范围。岸边是有shoreForm的水沫，可以控制它的范围，由水面可视中心扩散到岸边，岸边的水沫最深。反射图提供了n.v下的fresnel亮度，它同shoreform是相反的作用，即没有水沫的地方是体现反射亮度的地方。
+ 至于移位贴图，主要作用是制造水沫和反射的交替效果，可以多次移位采样叠加来参与最终计算。
+     至于波动，通过unity_WorldToObject计算wave，控制uv波动的频率、幅度。法线图采样两次混合之后的r、g通道作为提供给后续计算的normal方向。
+ 
+ 注：常用的_ProjectionParams实际是 Vector4f(device.GetInvertProjectionMatrix() ? -1.0f : 1.0f, projNear, projFar, invFar，一般用_ProjectionParams.g来参与屏幕坐标或深度坐标的计算。
